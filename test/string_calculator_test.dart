@@ -20,5 +20,9 @@ void main() {
     test('should add two comma-separated numbers', () {
       expect(calculator.add('1,5'), equals(6));
     });
+
+    test('should add any amount of numbers', () {
+      expect(calculator.add('1,2,3'), equals(6));
+    });
   });
 }
