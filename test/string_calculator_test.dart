@@ -32,5 +32,13 @@ void main() {
     test('should support custom single-character delimiters', () {
       expect(calculator.add('//;\n1;2'), equals(3));
     });
+
+    test('should throw exception for negative numbers', () {
+      expect(() => calculator.add('-1'), throwsA(predicate((e) => 
+        e.toString().contains('negative numbers not allowed -1'))));
+      
+      expect(() => calculator.add('2,-4,3,-5'), throwsA(predicate((e) => 
+        e.toString().contains('negative numbers not allowed -4,-5'))));
+    });
   });
 }
