@@ -28,5 +28,9 @@ void main() {
     test('should handle newlines as delimiters', () {
       expect(calculator.add('1\n2,3'), equals(6));
     });
+
+    test('should support custom single-character delimiters', () {
+      expect(calculator.add('//;\n1;2'), equals(3));
+    });
   });
 }
