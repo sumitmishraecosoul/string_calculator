@@ -14,10 +14,13 @@ class StringCalculator {
     }
     
     var parts = input.split(delimiter);
-    var sum = 0;
-    for (var part in parts) {
-      sum += int.parse(part);
+    var numbers_list = parts.map(int.parse).toList();
+    
+    var negatives = numbers_list.where((n) => n < 0).toList();
+    if (negatives.isNotEmpty) {
+      throw ArgumentError('negative numbers not allowed ${negatives.join(',')}');
     }
-    return sum;
+    
+    return numbers_list.reduce((a, b) => a + b);
   }
 }
