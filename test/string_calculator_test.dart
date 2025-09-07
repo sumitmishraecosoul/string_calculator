@@ -8,5 +8,9 @@ void main() {
     setUp(() {
       calculator = StringCalculator();
     });
+
+    test('should return 0 for empty string', () {
+      expect(calculator.add(''), equals(0));
+    });
   });
 }
