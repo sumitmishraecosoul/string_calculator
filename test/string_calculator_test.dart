@@ -16,5 +16,9 @@ void main() {
     test('should return the number for single number', () {
       expect(calculator.add('1'), equals(1));
     });
+
+    test('should add two comma-separated numbers', () {
+      expect(calculator.add('1,5'), equals(6));
+    });
   });
 }
