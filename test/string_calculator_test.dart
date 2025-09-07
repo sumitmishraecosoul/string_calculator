@@ -24,5 +24,9 @@ void main() {
     test('should add any amount of numbers', () {
       expect(calculator.add('1,2,3'), equals(6));
     });
+
+    test('should handle newlines as delimiters', () {
+      expect(calculator.add('1\n2,3'), equals(6));
+    });
   });
 }
