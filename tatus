@@ -1,0 +1,4 @@
+[33mdf0c14d[m[33m ([m[1;36mHEAD[m[33m -> [m[1;32mmain[m[33m, [m[1;31morigin/main[m[33m)[m feat: add newline support, custom delimiters, and negative validation
+[33me833d29[m feat: add newline support, custom delimiters, and negative validation
+[33mc7e1228[m test: add failing test for empty string
+[33m9d1b57d[m chore: scaffold repo and add README, test config

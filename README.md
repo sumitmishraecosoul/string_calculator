@@ -55,7 +55,3 @@ TDD is harder than it looks. The discipline of writing failing tests first and t
 
 The refactoring step was surprisingly satisfying - extracting those helper methods made the code so much cleaner.
 
-## References
-
-- [String Calculator Kata](http://osherove.com/tdd-kata-1/)
-- [Incubyte TDD Blog](https://blog.incubyte.co/blog/tdd/)

@@ -6,11 +6,13 @@ class StringCalculator {
     var input = _getInput(numbers);
     
     var parts = input.split(delimiter);
-    var numbers_list = parts.map(int.parse).toList();
+    var numbersList = parts.map(int.parse).toList();
     
-    _validateNoNegatives(numbers_list);
-    
-    return numbers_list.reduce((a, b) => a + b);
+    _validateNoNegatives(numbersList);
+    if(delimiter.toString().contains('*')){
+      return numbersList.reduce((a, b) => a * b);
+    }
+    return numbersList.reduce((a, b) => a + b);
   }
   
   RegExp _getDelimiter(String numbers) {
